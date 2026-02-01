@@ -1,37 +1,42 @@
+import 'package:api_dio_app/Models/product_model.dart' show ProductModel;
 import 'package:flutter/material.dart';
 
-class Productcard extends StatefulWidget {
-  const Productcard({super.key});
-
-  @override
-  State<Productcard> createState() => _ProductcardState();
-}
-
-class _ProductcardState extends State<Productcard> {
+class Productcard extends StatelessWidget {
+  const Productcard({super.key, required this.product});
+  final ProductModel product;
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(10),
-      margin: EdgeInsets.all(10),
+      height: 200,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
         children: [
-          Image.network("https://via.placeholder.com/150"),
-          Text(
-            "Product Name",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          
+          Image.network(
+            product.image,
+            width: 100,
+            height: 100,
+            fit: BoxFit.cover,
           ),
-
+          Text(
+            product.title,
+            textAlign: TextAlign.start,
+            maxLines: 2,
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+       SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "100\$",
+                "${product.price}\$",
                 style: TextStyle(
                   fontSize: 14,
+                    overflow: TextOverflow.ellipsis, 
                   fontWeight: FontWeight.normal,
                   color: Colors.green,
                 ),
@@ -41,7 +46,7 @@ class _ProductcardState extends State<Productcard> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Icon(Icons.star, color: Colors.yellow, size: 16),
-                  Text("Rating: 4.5"),
+                  Text("${product.rating}"),
                 ],
               ),
             ],
