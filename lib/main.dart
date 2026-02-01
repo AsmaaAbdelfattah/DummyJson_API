@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:api_dio_app/Models/ProductModel.dart';
+import 'package:api_dio_app/Models/productModel.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
                     fontSize: 20,
                   ),),
                   
-                  subtitle: Text("Price: ${snapshot.data![index].price} $"),
+                  subtitle: Text("Price: ${snapshot.data![index].price} \$"),
                 );
               },
             );
