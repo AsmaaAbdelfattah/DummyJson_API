@@ -1,17 +1,24 @@
-# api_dio_app
+# Flutter Dio API Example
 
-A new Flutter project.
+This is a simple Flutter application demonstrating how to fetch data from an API using Dio, handle asynchronous requests with FutureBuilder, and display images from network URLs.
 
-## Getting Started
+# Features
 
-This project is a starting point for a Flutter application.
+- Fetch data from a remote API using Dio
 
-A few resources to get you started if this is your first Flutter project:
+- Display data asynchronously using FutureBuilder
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Render images from network URLs
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# DummyJson_API
+- Clean and simple UI for demonstration
+
+Getting Started
+# Prerequisites
+
+- Flutter SDK installed: Flutter Installation Guide
+
+- An IDE (VS Code, Android Studio, or IntelliJ)
+
+- Internet connection to fetch API data
+# Screenshot
+<img width="1080" height="2400" alt="Screenshot_1769945025" src="https://github.com/user-attachments/assets/192def7b-bc5f-4683-a05b-38a351021b27" />
